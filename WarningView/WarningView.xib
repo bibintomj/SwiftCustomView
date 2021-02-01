@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15702" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina5_5" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15704"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Sofia Pro Bold.ttf">
+            <string>SofiaPro-Bold</string>
+        </array>
+        <array key="Sofia Pro Regular.ttf">
+            <string>SofiaPro-Regular</string>
+        </array>
+        <array key="sofiapro-light.otf">
+            <string>SofiaProLight</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" restorationIdentifier="WarningView" id="iN0-l3-epB" customClass="WarningView" customModule="Quickerala" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="736"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ErrorRobot" translatesAutoresizingMaskIntoConstraints="NO" id="Kpl-oO-L6L">
+                    <rect key="frame" x="30" y="135.66666666666669" width="354" height="188.66666666666669"/>
+                </imageView>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="22" translatesAutoresizingMaskIntoConstraints="NO" id="g5G-bv-gdv">
+                    <rect key="frame" x="30" y="406" width="354" height="71.333333333333314"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="OOPS!" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fKA-Ht-yCO">
+                            <rect key="frame" x="0.0" y="0.0" width="354" height="26"/>
+                            <fontDescription key="fontDescription" name="SofiaPro-Bold" family="SofiaPro-Bold" pointSize="25"/>
+                            <nil key="textColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some unexpected error occured in server." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nd2-O2-PMt">
+                            <rect key="frame" x="0.0" y="48" width="354" height="23.333333333333329"/>
+                            <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="17"/>
+                            <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                </stackView>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Tap to Retry" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qM0-KL-KW7">
+                    <rect key="frame" x="30" y="541.33333333333337" width="354" height="21.333333333333371"/>
+                    <fontDescription key="fontDescription" name="SofiaProLight" family="Sofia Pro" pointSize="22"/>
+                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Gzm-bz-GnB">
+                    <rect key="frame" x="30" y="592.66666666666663" width="354" height="36"/>
+                    <fontDescription key="fontDescription" name="SofiaPro-Regular" family="Sofia Pro" pointSize="17"/>
+                    <state key="normal" title="Go back">
+                        <color key="titleColor" red="0.99607843139999996" green="0.38823529410000002" blue="0.0039215686269999999" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                    </state>
+                    <connections>
+                        <action selector="didTapDismiss:" destination="iN0-l3-epB" eventType="touchUpInside" id="0a7-dL-7MO"/>
+                    </connections>
+                </button>
+            </subviews>
+            <color key="backgroundColor" systemColor="tertiarySystemGroupedBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="Kpl-oO-L6L" firstAttribute="height" secondItem="iN0-l3-epB" secondAttribute="height" multiplier="1:3.9" id="2fx-Xk-ovb"/>
+                <constraint firstItem="Kpl-oO-L6L" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1:1.6" id="GUO-Tp-o6E"/>
+                <constraint firstItem="Kpl-oO-L6L" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="Msh-lF-res"/>
+                <constraint firstItem="Gzm-bz-GnB" firstAttribute="leading" secondItem="qM0-KL-KW7" secondAttribute="leading" id="O49-oJ-Nog"/>
+                <constraint firstItem="qM0-KL-KW7" firstAttribute="leading" secondItem="g5G-bv-gdv" secondAttribute="leading" id="RXM-ND-30W"/>
+                <constraint firstItem="qM0-KL-KW7" firstAttribute="centerY" secondItem="iN0-l3-epB" secondAttribute="centerY" multiplier="1.5:1" id="d4e-kX-u7U"/>
+                <constraint firstItem="g5G-bv-gdv" firstAttribute="centerX" secondItem="iN0-l3-epB" secondAttribute="centerX" id="fAL-zF-2oD"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="g5G-bv-gdv" secondAttribute="trailing" constant="30" id="fQM-vE-5EI"/>
+                <constraint firstItem="g5G-bv-gdv" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="30" id="fds-Pa-uA7"/>
+                <constraint firstItem="Gzm-bz-GnB" firstAttribute="trailing" secondItem="qM0-KL-KW7" secondAttribute="trailing" id="iuZ-Bf-UEk"/>
+                <constraint firstItem="g5G-bv-gdv" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" multiplier="1.2:1" id="jn6-Lq-iuN"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="Kpl-oO-L6L" secondAttribute="trailing" constant="30" id="v7L-KU-mH1"/>
+                <constraint firstItem="qM0-KL-KW7" firstAttribute="trailing" secondItem="g5G-bv-gdv" secondAttribute="trailing" id="za4-fC-NGG"/>
+                <constraint firstItem="Gzm-bz-GnB" firstAttribute="top" secondItem="qM0-KL-KW7" secondAttribute="bottom" constant="30" id="zkJ-zh-fAr"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <connections>
+                <outlet property="descriptionLabel" destination="nd2-O2-PMt" id="7WQ-7q-jRZ"/>
+                <outlet property="dismissButton" destination="Gzm-bz-GnB" id="VA3-Za-dzI"/>
+                <outlet property="imageView" destination="Kpl-oO-L6L" id="t1k-ho-mrl"/>
+                <outlet property="reloadLabel" destination="qM0-KL-KW7" id="0n3-bX-Ydb"/>
+                <outlet property="titleLabel" destination="fKA-Ht-yCO" id="7hJ-Jy-axG"/>
+            </connections>
+            <point key="canvasLocation" x="131.25" y="189.08450704225353"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ErrorRobot" width="900" height="858"/>
+    </resources>
+</document>
